@@ -11,11 +11,17 @@ function checker(word) {// ritorna true se palindroma oppure false se non palind
         let character1 = word[i];
         let character2 = word[word.length - (i + 1)];
 
-        console.log(character1, character2);
-
         if (character1 != character2) {
             check = false;
         }
     }
     return check;
+}
+
+let palCheck = checker(userWord);
+
+if (palCheck) {
+    alert("La parola è palindroma");
+} else {
+    alert("La parola NON è palindroma");
 }
